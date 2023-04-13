@@ -42,7 +42,6 @@ const Input = function() {
             </fieldset>
         </form>
     );
-    const drone = new Scaledrone('cG3HuR7GIhCwzmNN');
 
 };
 
