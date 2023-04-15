@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../components/Header/Header';
-import { randomName, randomColor } from "../../utils/utils";
+import { HeaderInner, HeaderWrapper,MessageInput,Button,FooterWrapper,MainWrapper } from '../../utils/style/defaultStyles'
+import { randomName, randomColor, clientID } from "../../utils/utils";
+import Messages from '../../components/Messages/Messages'
+
 
 const Chat = () => {
     const [user, setUser] = useState([]);
@@ -10,7 +12,7 @@ const Chat = () => {
 
     useEffect(() => {
         if (user.username !== "") {
-            const drone = new window.Scaledrone('cG3HuR7GIhCwzmNN', {
+            const drone = new window.Scaledrone(clientID, {
                 data: user,
             });
             setDrone(drone);

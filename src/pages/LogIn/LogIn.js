@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AppWrapper,HeaderWrapper, HeaderInner, LogInWrapper, FooterWrapper,MessageInput, Button, MainWrapper } from "../../utils/defaultStyles";
 import Input from "../../components/Input/Input";
-import { randomName, randomColor } from "../../utils/utils";
+import { randomName, randomColor, clientID } from "../../utils/utils";
 import Messages from '../../components/Messages/Messages':
 
 
@@ -13,7 +13,7 @@ const LogIn = () => {
 
     useEffect(() => {
         if (user.username !== "") {
-            const drone = new window.Scaledrone('cG3HuR7GIhCwzmNN', {
+            const drone = new window.Scaledrone(clientID, {
                 data: user,
             });
             setDrone(drone);
