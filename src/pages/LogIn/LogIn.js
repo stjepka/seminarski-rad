@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AppWrapper, HeaderWrapper, HeaderInner, LogInWrapper, FooterWrapper,MessageInput, Button, MainWrapper } from "../../utils/defaultStyles";
 //import Iframe from "react-iframe";
-//import Input from "../../components/Input/Input";
 import { randomName, randomColor, clientID } from "../../utils/utils";
 import Messages from '../../components/Messages/Messages';
 
@@ -90,7 +89,7 @@ const LogIn = () => {
             <LogInWrapper>
                 <HeaderWrapper>
                     <HeaderInner>
-                        Chat app for: {user.username}
+                        Your username: {user.username}
                     </HeaderInner>
                 </HeaderWrapper>
                 <MainWrapper className="Messages">
