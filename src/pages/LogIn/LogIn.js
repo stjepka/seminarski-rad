@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { AppWrapper,HeaderWrapper, HeaderInner, LogInWrapper, FooterWrapper,MessageInput, Button, MainWrapper } from "../../utils/defaultStyles";
-import Input from "../../components/Input/Input";
+import { AppWrapper, HeaderWrapper, HeaderInner, LogInWrapper, FooterWrapper,MessageInput, Button, MainWrapper } from "../../utils/defaultStyles";
+//import Iframe from "react-iframe";
+//import Input from "../../components/Input/Input";
 import { randomName, randomColor, clientID } from "../../utils/utils";
-import Messages from '../../components/Messages/Messages':
+import Messages from '../../components/Messages/Messages';
 
 
 const LogIn = () => {
@@ -33,19 +34,19 @@ const LogIn = () => {
                 roomEvents();
             });
 
-        drone.on("error", (error) => console.error(error));
-        drone.on("disconnect", () => {
-            console.log(
-                "Disconnected, Scaledrone reconnect"
-            );
-        });
-        drone.on("reconnect", () => {
-            console.log("Reconnected");
-        });
+            drone.on("error", (error) => console.error(error));
+            drone.on("disconnect", () => {
+                console.log(
+                    "Disconnected, Scaledrone reconnect"
+                );
+            });
+            drone.on("reconnect", () => {
+                console.log("Reconnected");
+            });
         };
 
         const roomEvents = () => {
-            const room = drone.subscribe(`observable-room`);
+            const room = drone.subscribe("observable-room");
             room.on("open", (error) => {
                 if (error) {
                     console.error(error);
@@ -113,8 +114,12 @@ const LogIn = () => {
                     <Button onClick={handleSend}>Send</Button>
                 </FooterWrapper>
             </LogInWrapper>
-{/* još neš dodaj
- */}        </AppWrapper>
+            {/* <Iframe url="https://chattereact.vercel.app/frame"
+            width="100%"
+            height="100%"
+            display="block"
+            position="relative"/> */}
+        </AppWrapper>
     ) 
 }
 

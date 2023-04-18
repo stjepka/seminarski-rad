@@ -29,9 +29,11 @@ const Messages = ({messages, currentUser}) => {
                  </MessageDiv>
            
                  : 
-                <MessageDiv className='Message DefaultMessage' color={currentMember.color}>
+                <MessageDiv className='Message DefaultMessage' color={currentUser.color}>
                 </MessageDiv>
         }
         </>
     )
 }
+
+export default Messages;
