@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { AppWrapper, HeaderWrapper, HeaderInner, LogInWrapper, FooterWrapper,MessageInput, Button, MainWrapper } from "../../utils/defaultStyles";
-//import Iframe from "react-iframe";
 import { randomName, randomColor, clientID } from "../../utils/utils";
 import Messages from '../../components/Messages/Messages';
 
@@ -107,17 +106,12 @@ const LogIn = () => {
                 </MainWrapper>
                 <FooterWrapper>
                     <MessageInput
-                    type="text"
-                    placeholder="What's on your mind?">
+                        type="text"
+                        placeholder="What's on your mind?">
                     </MessageInput>
                     <Button onClick={handleSend}>Send</Button>
                 </FooterWrapper>
             </LogInWrapper>
-            {/* <Iframe url="https://chattereact.vercel.app/frame"
-            width="100%"
-            height="100%"
-            display="block"
-            position="relative"/> */}
         </AppWrapper>
     ) 
 }

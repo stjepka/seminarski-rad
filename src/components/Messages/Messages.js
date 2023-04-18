@@ -1,5 +1,5 @@
 import React from "react";
-import { MessageDiv, MessageDivContent } from "../../utils/defaultStyles";
+import { MessageDiv, MessageDivContent, SecondaryText } from "../../utils/defaultStyles";
 
 const Messages = ({messages, currentUser}) => {
     return (
@@ -9,10 +9,10 @@ const Messages = ({messages, currentUser}) => {
                 <MessageDiv usersMessage className="Message">
                     <MessageDivContent color={messages.data.color}>
                         <div>
-                            User: {messages.data.name}
+                            {messages.data.name}
                         </div>
                         <div>
-                            Message: {messages.data.message}
+                            Message:{messages.data.message}
                         </div>
                     </MessageDivContent>
                 </MessageDiv>

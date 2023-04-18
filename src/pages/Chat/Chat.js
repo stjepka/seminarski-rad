@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { HeaderInner, HeaderWrapper,MessageInput,Button,FooterWrapper,MainWrapper } from '../../utils/defaultStyles'
 import { randomName, randomColor, clientID } from "../../utils/utils";
-import Messages from '../../components/Messages/Messages'
+import Messages from '../../components/Messages/Messages';
+//import Loader from "../../components/Loader/Loader";
 
 
 const Chat = () => {
@@ -78,14 +79,14 @@ const Chat = () => {
         document.querySelector("input").value="";
     }
 
-    return (
+    return /* !room ? <Loader /> : */ (
         <>
         <HeaderWrapper>
             <HeaderInner>
-                Chat app for: {user.username}
+                Welcome, {user.username}!
             </HeaderInner>
         </HeaderWrapper>
-        <MainWrapper isSecondary className="Messages">
+        <MainWrapper className="Messages">
             {messages.map((message, index) => {
                 return (
                     <Messages

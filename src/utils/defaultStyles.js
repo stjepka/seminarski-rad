@@ -124,10 +124,15 @@ export const MessageDivContent = styled.div`
     padding:12px;
     border-radius:12px;
     top:0px;
-    font-family: monserrat;
       ${ (props) => props.color &&    `
       background-color: ${props.color};
       color: ${colors.textSecondary};
+      font-family: monospace;
       `
       }
 `;
+
+/* export const SecondaryText = styled.p`
+    font-size: 39px;
+
+`; */
