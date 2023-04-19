@@ -100,8 +100,8 @@ const Chat = () => {
         <FooterWrapper>
             <MessageInput
                 type="text"
-                placeholder="What's on your mind?">
-            </MessageInput>
+                placeholder="What's on your mind?"
+            />
             <Button onClick={handleSend}>Send</Button>
         </FooterWrapper>
         </>
