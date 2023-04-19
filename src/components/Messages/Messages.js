@@ -9,10 +9,7 @@ const Messages = ({messages, currentUser}) => {
                 <MessageDiv usersMessage className="Message">
                     <MessageDivContent color={messages.data.color}>
                         <div>
-                            {messages.data.name}
-                        </div>
-                        <div>
-                            Message:{messages.data.message}
+                            {messages.data.message}
                         </div>
                     </MessageDivContent>
                 </MessageDiv>
@@ -20,10 +17,10 @@ const Messages = ({messages, currentUser}) => {
                 <MessageDiv notUsersMessage className='Message'>
                     <MessageDivContent color={messages.data.color}>
                         <div>
-                            User: {messages.data.name}
+                            {messages.data.name}
                         </div>
                         <div>
-                            Message: {messages.data.message}
+                            {messages.data.message}
                         </div>
                     </MessageDivContent>
                  </MessageDiv>

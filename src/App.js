@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/login" element={<LogIn />} />
-          <Route exact path="/chat" element={<Chat />} />
+          <Route exact path="/" element={<Chat />} />
         </Routes>
       </BrowserRouter>
   );

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../utils/theme";
 
+
 export const Button = styled.button`
     display: inline-block;
     width: 150px;
@@ -127,7 +128,8 @@ export const MessageDivContent = styled.div`
       ${ (props) => props.color &&    `
       background-color: ${props.color};
       color: ${colors.textSecondary};
-      font-family: monospace;
+      font-family: Helvetica;
+      text-shadow: 1px 1px 2px grey;
       `
       }
 `;
