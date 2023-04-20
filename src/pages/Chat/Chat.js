@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { HeaderInner, HeaderWrapper,MessageInput,Button,FooterWrapper,MainWrapper } from '../../utils/defaultStyles'
 import { randomName, randomColor, clientID } from "../../utils/utils";
 import Messages from '../../components/Messages/Messages';
-//import Loader from "../../components/Loader/Loader";
 
 
 const Chat = () => {
@@ -79,7 +78,7 @@ const Chat = () => {
         document.querySelector("input").value="";
     }
 
-    return /* !room ? <Loader /> : */ (
+    return (
         <>
         <HeaderWrapper>
             <HeaderInner>

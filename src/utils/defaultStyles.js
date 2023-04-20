@@ -133,8 +133,3 @@ export const MessageDivContent = styled.div`
       `
       }
 `;
-
-/* export const SecondaryText = styled.p`
-    font-size: 39px;
-
-`; */
